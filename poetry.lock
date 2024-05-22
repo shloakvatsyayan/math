@@ -128,6 +128,16 @@ files = [
 pycparser = "*"
 
 [[package]]
+name = "chromedriver"
+version = "2.24.1"
+description = "Tool for downloading chromedriver"
+optional = false
+python-versions = "*"
+files = [
+    {file = "chromedriver-2.24.1-py2.py3-none-any.whl", hash = "sha256:b70dee664075ea9209911527af310b09b99bbc0555d897a0dd8c316af9d23daf"},
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -554,4 +564,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.12"
-content-hash = "1f4b95547ce0b7edc3141da74cfe5990640eadcd610901d4bb5a8a9555907d9b"
+content-hash = "5f13a0eda7ce4a79acf1c1528de4a774fe4e2521664e0f5254c59b709697b50a"
