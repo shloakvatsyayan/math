@@ -1,21 +1,8 @@
 import statistics as stats
 import numpy
-while True:
-  numlist = []
-  while True:
-    num = input("Enter number in list: ")
-    if num == "":
-      break
-    else:
-      try:
-        num = float(num)
-        numlist.append(num)
-      except TypeError:
-        print("Invalid input, ending list")
-        break
-      except ValueError:
-        print("Invalid input, ending list")
-        break
+import json
+
+def get_stats(numlist):
   mean_avr = numpy.mean(numlist)
   madlist = []
   for i in numlist:
@@ -43,3 +30,26 @@ while True:
   print("Standard Deviation: ", numpy.std(numlist))
   print("Variance: ", numpy.std(numlist)*numpy.std(numlist))
   print("------------------")
+
+enterloop = False
+with open('list.json', 'r') as openfile:
+  num_list = json.load(openfile)
+
+
+while enterloop:
+  numlist = []
+  while True:
+    num = input("Enter number in list: ")
+    if num == "":
+      break
+    else:
+      try:
+        num = float(num)
+        numlist.append(num)
+      except TypeError:
+        print("Invalid input, ending list")
+        break
+      except ValueError:
+        print("Invalid input, ending list")
+        break
+  get_stats(numlist)
